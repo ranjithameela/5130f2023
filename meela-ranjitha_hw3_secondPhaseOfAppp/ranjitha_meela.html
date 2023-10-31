@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranjitha Meela</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #a1a31d;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #139d94;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #020009;
+        }
+        h3 {
+            font-size: 24px;
+            color: #020009;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 30%;
+            height: 30%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+
+        ul, ol {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .linkedin-link {
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 70px;
+        }
+        .linkedin-link:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            position: relative;
+        }
+        
+        .top-right {
+            position: absolute;
+            top: 10px; 
+            right: 10px; 
+        }
+        
+        .feedback-button {
+            position: absolute;
+            top: 10px;
+            right: 100px;
+            left: 10;
+
+        }
+        .InvestmentPortfolio-button {
+            position: absolute;
+            top: 10px;
+            right: 175px;
+            left: 10;
+        }
+    
+    </style>
+
+    <script>
+        // JavaScript function to show or hide the LinkedIn link based on radio button selection
+        function toggleLinkedInLink() {
+            var linkElement = document.getElementById("linkedin-link");
+            var yesRadio = document.getElementById("yes-radio");
+
+            if (yesRadio.checked) {
+                linkElement.style.display = "block";
+            } else {
+                linkElement.style.display = "none";
+            }
+        }
+        window.onload = function () {
+            var linkElement = document.getElementById("linkedin-link");
+            linkElement.style.display = "none";
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Ranjitha Meela's page</h1>
+    </header>
+
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ranjitha, pursuing Master's in computer science at University of Massachusetts Lowell.</p>
+        <img src="./Myphoto1.jpg" alt="Your Photo">
+
+        <h2>My skills</h2>
+        <ul>
+            <li>C, Java </li>
+            <li>Mysql</li>
+            <li>HTML</li>
+        </ul>
+        <h3>My Interests</h3>
+        <ol>
+            <li>I enjoy web development.</li>
+            <li>I love learning new technologies.</li>
+            <li>I'm passionate about creating great user experiences.</li>
+        </ol>
+
+        <!-- Radio buttons for "Yes" and "No" options -->
+        <label for="yes-radio">Do you want to know more about me?</label>
+        <input type="radio" id="yes-radio" name="linkedin-choice" value="yes" onclick="toggleLinkedInLink()"> Yes
+        <input type="radio" id="no-radio" name="linkedin-choice" value="no" onclick="toggleLinkedInLink()"> No
+
+        <!-- LinkedIn link initially hidden -->
+        <a id="linkedin-link" class="linkedin-link" href="https://www.linkedin.com/in/ranjitha-meela-56519b178/">Click Me!</a>
+        <p>&nbsp;</p>
+        <button onclick="redirectToUserDetails()" class="top-right">User Details</button>
+        <button onclick="redirectTofeedback()" class="feedback-button">Feedback</button>
+        <button onclick="redirectToInvestmentPortfolio()" class="InvestmentPortfolio-button">Portfolio</button>
+    </div>
+    <script>
+        // JavaScript function to redirect to the user details page
+        function redirectToUserDetails() {
+            window.location.href = "user_details.html";
+        }
+        function redirectTofeedback() {
+            window.location.href = "feedback.html";
+        }
+        function redirectToInvestmentPortfolio() {
+            window.location.href = "InvestmentPortfolio.html";
+        }
+        
+        
+    </script>
+</body>
+</html>
